@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 08:51:06 by chhoflac          #+#    #+#             */
-/*   Updated: 2024/12/04 11:25:51 by chhoflac         ###   ########.fr       */
+/*   Updated: 2024/12/04 11:27:35 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	print_up(char *str)
 {
-	char 	d;
+	char 	conv;
 	int		j;
 	
 	j = 0;
@@ -25,8 +25,8 @@ void	print_up(char *str)
 			std::cout << str[j];
 		else
 		{
-			d = std::toupper(str[j]);
-			std::cout << d;
+			conv = std::toupper(str[j]);
+			std::cout << conv;
 		}
 	}
 }

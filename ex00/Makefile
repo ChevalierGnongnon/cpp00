@@ -6,7 +6,7 @@ OBJS = $(SOURCES:.cpp=.o)
 
 RM = rm -rf 
 
-CC = g++
+CC = c++
 
 FLAGS = -Werror -Wextra -Wall -std=c++98
 
