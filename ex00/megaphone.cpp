@@ -6,7 +6,7 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 08:51:06 by chhoflac          #+#    #+#             */
-/*   Updated: 2024/12/04 11:05:29 by chhoflac         ###   ########.fr       */
+/*   Updated: 2024/12/04 11:24:23 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ void	print_up(char *str)
 	
 	for(j = 0; str[j]; j++)
 	{
-		if (!isalpha(str[j]))
+		if (!std::isalpha(str[j]))
 			std::cout << str[j];
 		else
 		{
-			d = toupper(str[j]);
+			d = std::toupper(str[j]);
 			std::cout << d;
 		}
 	}
@@ -42,6 +42,6 @@ int main(int argc, char **argv)
 			if (argv[i + 1] != NULL)
 				std::cout << " ";
 		}
-		std::cout << "\n";
+		std::cout << std::endl;
 	}
 }
