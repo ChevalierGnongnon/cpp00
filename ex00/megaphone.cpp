@@ -6,13 +6,42 @@
 /*   By: chhoflac <chhoflac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 08:51:06 by chhoflac          #+#    #+#             */
-/*   Updated: 2024/12/04 08:56:27 by chhoflac         ###   ########.fr       */
+/*   Updated: 2024/12/04 11:05:29 by chhoflac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <cctype>
 
-int main(void)
+void	print_up(char *str)
 {
-	std::cout << "aaaaaaaaa";
+	char 	d;
+	int		j;
+	
+	for(j = 0; str[j]; j++)
+	{
+		if (!isalpha(str[j]))
+			std::cout << str[j];
+		else
+		{
+			d = toupper(str[j]);
+			std::cout << d;
+		}
+	}
+}
+
+int main(int argc, char **argv)
+{
+	int i = 1;
+	
+	if (argc == 1)
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
+	else if (argc > 1) {
+		for (i; argv[i]; i++) {
+			print_up(argv[i]);
+			if (argv[i + 1] != NULL)
+				std::cout << " ";
+		}
+		std::cout << "\n";
+	}
 }
